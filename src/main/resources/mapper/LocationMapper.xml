@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.LocationMapper">
+    <select id="findAllLocation" resultType="com.example.demo.domain.LocationVO">
+        SELECT * FROM location
+    </select>
+
+    <insert id="addLocation" useGeneratedKeys="true" keyProperty="newLocation._lid">
+        INSERT INTO location (lat, lan, address, dt, num, _uid)
+        VALUES (#{newLocation.lat}, #{newLocation.lan}, #{newLocation.address}, #{newLocation.dt}, #{newLocation.num}, #{newLocation._uid})
+    </insert>
+
+    <delete id="deleteLocation">
+        DELETE * FROM location WHERE _lid=#{_lid}
+    </delete>
+ </mapper>
