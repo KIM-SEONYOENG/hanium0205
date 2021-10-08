@@ -14,6 +14,14 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @GetMapping("/test")
+    public UserVO test() {
+        UserVO tmp = new UserVO();
+        tmp.set_uid(18);
+        tmp.setId("테스트");
+        return tmp;
+    }
+
     @GetMapping
     public List<UserVO> findAllUser() {
         return userService.findAllUser();
