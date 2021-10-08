@@ -21,6 +21,7 @@ public class LocationController {
 
     @GetMapping("/search/uid")
     public List<LocationVO> findLocationByUid(@RequestParam long _uid) { return locationService.findLocationByUid(_uid); }
+
     @PostMapping("/add")
     public void addLocation(@RequestBody LocationVO newLocation) {
         int result =  locationService.addLocation(newLocation);
