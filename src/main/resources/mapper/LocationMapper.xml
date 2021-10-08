@@ -4,6 +4,10 @@
     <select id="findAllLocation" resultType="com.example.demo.domain.LocationVO">
         SELECT * FROM location
     </select>
+    
+    <select id="findLocationByUid" resultType="com.example.demo.domain.LocationVO">
+        SELECT * FROM location WHERE _uid=#{_uid}
+    </select>
 
     <insert id="addLocation" useGeneratedKeys="true" keyProperty="newLocation._lid">
         INSERT INTO location (lat, lan, address, dt, num, _uid)
