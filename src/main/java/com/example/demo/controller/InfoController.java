@@ -17,4 +17,14 @@ public class InfoController {
 
     @GetMapping
     public List<InfoVO> findAllInfo() { return infoService.findAllInfo(); }
+
+    @GetMapping("/test")
+    public InfoVO test() {
+        InfoVO tmp = new InfoVO();
+        tmp.set_iid(2);
+        tmp.set_uid(2);
+        tmp.setIntro("테스트 입니다");
+
+        return tmp;
+    }
 }
