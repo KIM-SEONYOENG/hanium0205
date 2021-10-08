@@ -14,18 +14,13 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/test")
-    public String test() { return "테스트"; }
-
-    @GetMapping
+    @GetMapping("")
     public List<UserVO> findAllUser() {
         return userService.findAllUser();
     }
 
     @GetMapping("/search/id")
-    public UserVO findById(@RequestParam("id") String id) {
-        return userService.findUserById(id);
-    }
+    public UserVO findById(@RequestParam("id") String id) { return userService.findUserById(id); }
 
     @GetMapping("/search/uid")
     public UserVO findUserByUid(@RequestParam("uid") long _uid) {
