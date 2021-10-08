@@ -3,9 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.domain.InfoVO;
 import com.example.demo.service.InfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,15 +14,5 @@ public class InfoController {
     private InfoService infoService;
 
     @GetMapping
-    public List<InfoVO> findAllInfo() { return infoService.findAllInfo(); }
-
-    @GetMapping("/test")
-    public InfoVO test() {
-        InfoVO tmp = new InfoVO();
-        tmp.set_iid(2);
-        tmp.set_uid(2);
-        tmp.setIntro("테스트 입니다");
-
-        return tmp;
-    }
+    public List<InfoVO> findAllLocation() { return infoService.findAllInfo(); }
 }
