@@ -10,7 +10,7 @@
     </select>
 
     <select id="findUserByUid" resultType="com.example.demo.domain.UserVO">
-        SELECT * FROM USER WHERE _uid=#{_uid}
+        SELECT * FROM user WHERE _uid=#{_uid}
     </select>
 
     <insert id="addUser" useGeneratedKeys="true" keyProperty="newUser._uid">
