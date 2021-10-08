@@ -4,7 +4,7 @@
     <select id="findAllLocation" resultType="com.example.demo.domain.LocationVO">
         SELECT * FROM location
     </select>
-    
+
     <select id="findLocationByUid" resultType="com.example.demo.domain.LocationVO">
         SELECT * FROM location WHERE _uid=#{_uid}
     </select>

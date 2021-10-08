@@ -20,7 +20,7 @@ public class LocationController {
     }
 
     @GetMapping("/search/uid")
-    public List<LocationVO> findLocationByUid(@RequestParam long _uid) { return locationService.findLocationByUid(_uid); }
+    public List<LocationVO> findUserByUid(@RequestParam("uid") long _uid) { return locationService.findLocationByUid(_uid); }
 
     @PostMapping("/add")
     public void addLocation(@RequestBody LocationVO newLocation) {

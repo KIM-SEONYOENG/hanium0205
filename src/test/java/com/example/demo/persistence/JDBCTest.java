@@ -21,7 +21,7 @@ public class JDBCTest {
                     DriverManager.getConnection(
                             "jdbc:mysql://localhost:3306/test?autoReconnect=true&userSSL=false",
                             "root",
-                            "1q2w3e4r")) {
+                            "1q2w3e4r%")) {
             System.out.println(con);
             } catch (SQLException e) {
                 e.printStackTrace();
