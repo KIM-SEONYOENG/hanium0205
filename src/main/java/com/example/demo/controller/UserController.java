@@ -15,12 +15,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/test")
-    public UserVO test() {
-        UserVO tmp = new UserVO();
-        tmp.set_uid(18);
-        tmp.setId("테스트");
-        return tmp;
-    }
+    public String test() { return "테스트"; }
 
     @GetMapping
     public List<UserVO> findAllUser() {
