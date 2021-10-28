@@ -18,3 +18,4 @@ public class VolunteerController {
     @GetMapping
     public List<VolunteerVO> findAllVolunteer() { return volunteerService.findAllVolunteer(); }
 }
+
