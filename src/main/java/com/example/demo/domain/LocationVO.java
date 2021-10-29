@@ -9,8 +9,8 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class LocationVO {
     private long _lid;
-    private BigDecimal lan;
-    private BigDecimal lat;
+    private double lan;
+    private double lat;
     private String address;
     private String dt;
     private int num;

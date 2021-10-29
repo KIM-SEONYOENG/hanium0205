@@ -23,10 +23,7 @@ public class LocationController {
     public List<LocationVO> findUserByUid(@RequestParam("uid") long _uid) { return locationService.findLocationByUid(_uid); }
 
     @PostMapping("/add")
-    public void addLocation(@RequestBody LocationVO newLocation) {
-        int result =  locationService.addLocation(newLocation);
-        System.out.println(result);
-    }
+    public LocationVO addLocation(@RequestBody LocationVO newLocation) { return locationService.addLocation(newLocation); }
 
     @DeleteMapping("/delete/{lid}")
     public void deleteUser(@PathVariable long _lid) { locationService.deleteLocation(_lid); }
